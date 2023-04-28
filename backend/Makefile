@@ -2,6 +2,9 @@ PROJECT_NAME = template
 
 .PHONY = test build push clean hooks
 
+run: venv
+	$(VENV)/python manage.py runserver 0.0.0.0:8080
+
 install: venv hooks
 
 test: venv
